@@ -1,14 +1,24 @@
 package io.github.jeffmmartins.biblioteca_livros.model;
 
 public class Livro {
+    private int id;
     private String nome;
     private String autor;
     private String anoPublicado;
 
-    public Livro(String nome, String autor, String anoPublicado) {
+    public Livro(int id, String nome, String autor, String anoPublicado) {
+        this.id = id;
         this.nome = nome;
         this.autor = autor;
         this.anoPublicado = anoPublicado;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public void setid(){
+        this.id = id;
     }
 
     public String getNome() {
@@ -38,6 +48,7 @@ public class Livro {
     @Override
     public String toString() {
         return "Livro{" +
+                "id:" + id + " " +
                 "nome='" + nome + '\'' +
                 ", autor='" + autor + '\'' +
                 ", anoPublicado='" + anoPublicado + '\'' +
